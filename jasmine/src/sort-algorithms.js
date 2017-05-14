@@ -27,7 +27,16 @@ function bubbleSort(arr){
 // merge back together
 // Runtime: O(nlog(n))
 function mergeSort(arr){
+  var mid = arr.length/2;
+  var left = arr.slice(0,mid);
+  var right = arr.slice(mid);
+  merge(mergeSort(left), mergeSort(right));
   return arr;
+}
+
+// merge two sorted arrays
+function merge(a,b){
+
 }
 
 // Selection Sort
